@@ -16,3 +16,4 @@ class UsersColaborators(models.Model):
     password = models.IntegerField()
     created_by = models.ForeignKey(UsersAdmin, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    
