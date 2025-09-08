@@ -1,0 +1,26 @@
+<form method="POST" action="{% url 'signin'%}">
+    {% csrf_token %}
+    <div>
+        <label for="">Name</label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="">Last Name</label>
+        <input type="text" name="last_name">
+    </div>
+    <div>
+        <label for="">User Name</label>
+        <input type="text" name="user_name">
+    </div>
+    <div>
+        <label for="">Email Address</label>
+        <input type="text" name="email">
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="password">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
