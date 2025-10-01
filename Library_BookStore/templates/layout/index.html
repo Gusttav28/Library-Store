@@ -7,18 +7,15 @@
 </head>
 <body>
    <section>
-        
-        <nav style="display: flex;">
+       <nav style="display: flex;">
             <ul><a href="/">Home</a></ul>
             <ul><a href="/BookStore">Books Store</a></ul>
             <ul><a href="http://">Saved</a></ul>
             <ul><a href="http://">Shippement</a></ul>
-            {% if request.user.is_authenticated %}
-            <ul>
-                <a href="/userBooks">Your Books</a>
-                <a href="{% url 'usersettings' %}">{{user}}</a>
-                <a href="/loginOut">Log out</a>
-            </ul>
+            {% if authenticated %}
+            <ul><a href="/userBooks">Your Books</a></ul>
+            <ul><a href="{% url 'usersettings' %}">{{user}}</a></ul>
+            <ul><a href="/loginOut">Log out</a></ul>
             {% else %}
             <ul><a href="/login">Login</a></ul>
             <ul><a href="/signin">Sign In</a></ul>
