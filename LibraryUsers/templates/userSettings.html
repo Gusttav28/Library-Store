@@ -1,0 +1,14 @@
+{% extends 'layout/index.html'%}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<ul>
+    <a href="/userSettings">{{user}}</a>
+</ul>
+{% else %}
+<p>Wrong page...</p>
+{%endif%}
+<p>Welcome Back! {{user}}</p>
+
+{% endblock %}

@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from LibraryUsers.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', LoginView , name='login'),
-    path('signin/', SignInView, name='signin'),
+    path('', include("Library_BookStore.urls")),
+    path('', include("LibraryUsers.urls")),
 ]

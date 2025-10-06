@@ -1,3 +1,7 @@
+{% extends 'layout/index.html'%}
+
+{% block content %}
+
 <form method="POST" action="{% url 'signin'%}">
     {% csrf_token %}
     <div>
@@ -23,4 +27,15 @@
     <div>
         <button type="submit">Submit</button>
     </div>
+
+    {% if email_authentication %}
+    <section>
+        <p>{{user_message}} <a style="color: blue;" href="/login">Click here to login!</a></p>
+    </section>
+    {% elif not email_authentication %}
+        <p>{{user_message}}</p>
+        <a style="color: blue;"  href="/login">Click below to login</a>
+    {%endif%}
 </form>
+
+{% endblock %}

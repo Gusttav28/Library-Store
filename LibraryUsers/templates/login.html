@@ -1,4 +1,8 @@
-<form action="{% url 'login' %}">
+{% extends 'layout/index.html'%}
+
+{% block content %}
+
+<form method="POST">
     {% csrf_token %}
     <div>
         <label for="">User Name</label>
@@ -11,4 +15,17 @@
     <div>
         <button type="submit">Submit</button>
     </div>
+
+    {% if not authenticated %}
+    <p>Hi! Welcome to libray store! Log in here</p>
+    {% elif authenticated %}
+    <section>
+        <p>{{successfully_login}}</p>
+        <p>Welcome Back, {{user}}!</p>
+    </section>
+    {% elif not authenticated %}
+    <p>Invalid User name or password, try again</p>
+    {% endif %}
 </form>
+
+{% endblock %}
