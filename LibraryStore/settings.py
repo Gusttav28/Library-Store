@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'LibraryUsers',
 ]
 
-AUTH_USER_MODEL = 'Library_AdminSite.UsersAdmin'
+AUTH_USER_MODEL = 'Library_AdminSite.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,10 +52,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.contrib.auth.backends.ModelBackend',
 ]
 
-ROOT_URLCONF = 'LibraryStore.User'
+ROOT_URLCONF = 'LibraryStore.urls'
 
 TEMPLATES = [
     {

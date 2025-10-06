@@ -7,3 +7,6 @@ def HomeView(request):
 
 def BookStore(request):
     return render(request, "BookStore.html")
+
+def AdminSite(request):
+    return render(request, "AdminSite.html")
