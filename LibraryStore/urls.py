@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # path('jet/', include('jet.urls', 'jet')),
+    # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
+    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('', include("Library_BookStore.urls")),
     path('', include("LibraryUsers.urls")),
