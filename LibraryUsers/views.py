@@ -41,7 +41,7 @@ def LoginView(request):
             print(context)
             print(db_users)
             
-    return render(request, 'login.html')
+    return render(request, 'login.html')    
 
 def LogOut(request):
     context = {
